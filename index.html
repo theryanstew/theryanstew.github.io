@@ -3,10 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website</title>
+    <title>SmartPrompt</title>
+    <style>
+        body {
+            background-color: #f5f5f5; /* Paper color (light grayish) */
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+            height: 100vh; /* Full viewport height */
+            flex-direction: column; /* Stack elements vertically */
+        }
+        .logo {
+            font-size: 72px; /* Large "SP" logo */
+            color: #ff00ff; /* Pink */
+            margin-bottom: 20px; /* Space below SP */
+            text-align: left; /* Align to the left within the center */
+            width: 100%; /* Full width for left alignment */
+            padding-left: 20%; /* Offset to center-left */
+        }
+        .title {
+            font-size: 48px; /* "smartprompt" text size */
+            color: #00ffff; /* Cyan */
+            margin-bottom: 20px; /* Space below smartprompt */
+            text-align: left; /* Align to the left within the center */
+            width: 100%; /* Full width for left alignment */
+            padding-left: 20%; /* Offset to center-left */
+        }
+        .slogan {
+            font-size: 24px; /* "Earn with AI Automations:" text size */
+            color: #ff00ff; /* Pink */
+            margin-bottom: 20px; /* Space below slogan */
+            text-align: left; /* Align to the left within the center */
+            width: 100%; /* Full width for left alignment */
+            padding-left: 20%; /* Offset to center-left */
+        }
+        .button {
+            font-size: 18px;
+            padding: 10px 20px;
+            background-color: #ff00ff; /* Pink button background */
+            color: white;
+            border: none;
+            border-radius: 20px; /* Rounded button */
+            cursor: pointer;
+            text-align: left; /* Align to the left within the center */
+            width: fit-content; /* Fit button to text */
+            margin-left: 20%; /* Offset to center-left */
+        }
+        .button:hover {
+            background-color: #00ffff; /* Cyan on hover */
+        }
+        .social-links {
+            position: fixed;
+            top: 20px;
+            right: 20px; /* Position icons in the top-right corner */
+            display: flex;
+            gap: 10px;
+        }
+        .social-links img {
+            width: 30px; /* Size of social icons */
+            height: 30px;
+            border: 2px solid #ff00ff; /* Pink border */
+        }
+        nav {
+            position: fixed;
+            top: 20px;
+            left: 20px; /* Position nav in the top-left corner */
+            display: flex;
+            gap: 20px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        nav a:hover {
+            color: #00ffff; /* Cyan on hover */
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome to My Website</h1>
-    <p>This is a simple website hosted on GitHub Pages.</p>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#gpts">GPTs</a>
+        <a href="#about">About</a>
+    </nav>
+    <div class="logo">SP</div>
+    <div class="title">smartprompt.</div>
+    <div class="slogan">Earn with AI Automations:</div>
+    <button class="button">Coming Soon</button>
+    <div class="social-links">
+        <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/5968/5968866.png" alt="Discord"></a>
+        <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/124/124021.png" alt="X"></a>
+        <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram"></a>
+    </div>
 </body>
 </html>
