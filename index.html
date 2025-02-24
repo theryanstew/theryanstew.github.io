@@ -3,101 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SmartPrompt</title>
+    <title>smartprompt</title>
     <style>
         body {
-            background-color: #f5f5f5; /* Paper color (light grayish) */
             margin: 0;
             padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #f5f5dc; /* Beige background */
             font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center; /* Center horizontally */
-            align-items: center; /* Center vertically */
-            height: 100vh; /* Full viewport height */
-            flex-direction: column; /* Stack elements vertically */
+            text-align: center;
+            overflow: hidden;
         }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+        }
+        
         .logo {
-            font-size: 72px; /* Large "SP" logo */
-            color: #ff00ff; /* Pink */
-            margin-bottom: 20px; /* Space below SP */
-            text-align: left; /* Align to the left within the center */
-            width: 100%; /* Full width for left alignment */
-            padding-left: 20%; /* Offset to center-left */
+            font-family: 'Courier New', Courier, monospace; /* Typewriter font */
+            font-size: 12vw; /* Responsive font size */
+            margin-bottom: 0.5em;
+            color: #333;
+            line-height: 1;
         }
-        .title {
-            font-size: 48px; /* "smartprompt" text size */
-            color: #00ffff; /* Cyan */
-            margin-bottom: 20px; /* Space below smartprompt */
-            text-align: left; /* Align to the left within the center */
-            width: 100%; /* Full width for left alignment */
-            padding-left: 20%; /* Offset to center-left */
+        
+        .tagline {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1.5rem;
+            margin-top: 2rem;
+            color: #555;
         }
-        .slogan {
-            font-size: 24px; /* "Earn with AI Automations:" text size */
-            color: #ff00ff; /* Pink */
-            margin-bottom: 20px; /* Space below slogan */
-            text-align: left; /* Align to the left within the center */
-            width: 100%; /* Full width for left alignment */
-            padding-left: 20%; /* Offset to center-left */
+        
+        .link {
+            color: #333;
+            text-decoration: underline;
+            font-weight: bold;
+            transition: color 0.3s ease;
         }
-        .button {
-            font-size: 18px;
-            padding: 10px 20px;
-            background-color: #ff00ff; /* Pink button background */
-            color: white;
-            border: none;
-            border-radius: 20px; /* Rounded button */
-            cursor: pointer;
-            text-align: left; /* Align to the left within the center */
-            width: fit-content; /* Fit button to text */
-            margin-left: 20%; /* Offset to center-left */
+        
+        .link:hover {
+            color: #777;
         }
-        .button:hover {
-            background-color: #00ffff; /* Cyan on hover */
+        
+        /* Media queries for better responsiveness */
+        @media (min-width: 768px) {
+            .logo {
+                font-size: 8vw;
+            }
         }
-        .social-links {
-            position: fixed;
-            top: 20px;
-            right: 20px; /* Position icons in the top-right corner */
-            display: flex;
-            gap: 10px;
-        }
-        .social-links img {
-            width: 30px; /* Size of social icons */
-            height: 30px;
-            border: 2px solid #ff00ff; /* Pink border */
-        }
-        nav {
-            position: fixed;
-            top: 20px;
-            left: 20px; /* Position nav in the top-left corner */
-            display: flex;
-            gap: 20px;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-size: 18px;
-        }
-        nav a:hover {
-            color: #00ffff; /* Cyan on hover */
+        
+        @media (min-width: 1200px) {
+            .logo {
+                font-size: 6.5rem;
+            }
         }
     </style>
 </head>
 <body>
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#gpts">GPTs</a>
-        <a href="#about">About</a>
-    </nav>
-    <div class="logo">SP</div>
-    <div class="title">smartprompt.</div>
-    <div class="slogan">Earn with AI Automations:</div>
-    <button class="button">Coming Soon</button>
-    <div class="social-links">
-        <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/5968/5968866.png" alt="Discord"></a>
-        <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/124/124021.png" alt="X"></a>
-        <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram"></a>
+    <div class="container">
+        <h1 class="logo">smartprompt</h1>
+        <p class="tagline">
+            Explore more GPTs and join 5000+ member Discord Community <a href="https://discord.gg/smartprompt" class="link">HERE</a>
+        </p>
     </div>
 </body>
 </html>
