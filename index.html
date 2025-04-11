@@ -5,15 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>smartprompt</title>
     <style>
-        body {
+        /* Reset margins/padding and ensure 100% height */
+        html, body {
             margin: 0;
-            padding: 2rem;
+            padding: 0;
+            height: 100%;
+        }
+        
+        /* Center everything vertically and horizontally */
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             background-color: #f5f5dc; /* Beige background */
             font-family: Arial, sans-serif;
             text-align: center;
         }
         
         .container {
+            width: 90%;
             max-width: 1200px;
             margin: 0 auto;
         }
@@ -21,7 +32,7 @@
         .logo {
             font-family: 'Courier New', Courier, monospace; /* Typewriter font */
             font-size: 12vw; /* Responsive font size */
-            margin: 0.5em 0 0.25em 0;
+            margin: 0.5em 0;
             color: #333;
             line-height: 1;
         }
@@ -29,7 +40,7 @@
         .tagline {
             font-family: 'Courier New', Courier, monospace;
             font-size: 1.4rem;
-            margin: 1.5rem 0 2rem 0;
+            margin: 1.5rem 0;
             color: #555;
             line-height: 1.5;
         }
@@ -45,28 +56,30 @@
             color: #777;
         }
 
-        /* LinkedIn icon container */
+        /* Social icon container */
         .social-links {
-            margin: 2rem 0 3rem 0; /* More space above/below */
+            margin: 2rem 0;
+            display: flex;
+            gap: 2rem; /* space between icons */
+            justify-content: center;
         }
 
-        .linkedin-icon svg {
-            width: 48px;  /* Larger icon */
-            height: 48px;
+        .icon {
+            width: 56px; /* Slightly bigger icons */
+            height: 56px;
             fill: #333;
             transition: fill 0.3s ease;
         }
 
-        .linkedin-icon svg:hover {
+        .icon:hover {
             fill: #777;
         }
 
         /* TOP GPTs Section */
         .top-gpts {
             font-family: 'Courier New', Courier, monospace;
-            margin: 3rem auto;
             max-width: 700px;
-            text-align: center;
+            margin: 2rem auto;
         }
 
         .top-gpts h2 {
@@ -82,7 +95,7 @@
         }
 
         .gpt-list li {
-            margin: 1rem 0;
+            margin: 1.5rem 0;
             font-size: 1.2rem; 
         }
 
@@ -125,51 +138,59 @@
         <!-- Logo -->
         <h1 class="logo">smartprompt</h1>
         
-        <!-- Tagline with updated Discord link -->
+        <!-- Tagline -->
         <p class="tagline">
-            Explore more GPTs and join 5000+ member Discord Community for AI News and Future AI Automations 
+            Explore more GPTs and join 5000+ member Discord Community 
             <a href="https://discord.gg/ZZDwQHhFUz" class="link">HERE</a>
         </p>
 
-        <!-- LinkedIn Icon Link (no text) -->
+        <!-- Social Icons -->
         <div class="social-links">
-            <a href="https://www.linkedin.com/in/ryan2stewart/" 
-               class="linkedin-icon" 
-               target="_blank" 
+            <!-- LinkedIn Icon -->
+            <a href="https://www.linkedin.com/in/ryan2stewart/"
+               target="_blank"
                rel="noopener noreferrer">
-                <!-- Inline SVG for LinkedIn icon -->
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                    <path d="M20 3H4C3.4 3 3 3.4 3 4V20C3 20.6 3.4 21 4 21H20C20.6 21 21 20.6 21 20V4C21 3.4 20.6 3 20 3ZM8.3 17.3H6V9.3H8.3V17.3ZM7.1 8.2C6.3 8.2 5.7 7.6 5.7 6.8C5.7 6 6.3 5.4 7.1 5.4C7.9 5.4 8.5 6 8.5 6.8C8.5 7.6 7.9 8.2 7.1 8.2ZM18 17.3H15.7V13.1C15.7 12.1 15.7 10.9 14.4 10.9C13.1 10.9 13 12 13 13V17.3H10.7V9.3H12.9V10.3H12.9C13.3 9.5 14.2 8.8 15.3 8.8C17.8 8.8 18 10.4 18 12.2V17.3Z" />
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M20 3H4C3.4 3 3 3.4 3 4V20C3 20.6 3.4 21 4 21H20C20.6 21 21 20.6 21 20V4C21 3.4 20.6 3 20 3ZM8.3 17.3H6V9.3H8.3V17.3ZM7.1 8.2C6.3 8.2 5.7 7.6 5.7 6.8C5.7 6 6.3 5.4 7.1 5.4C7.9 5.4 8.5 6 8.5 6.8C8.5 7.6 7.9 8.2 7.1 8.2ZM18 17.3H15.7V13.1C15.7 12.1 15.7 10.9 14.4 10.9C13.1 10.9 13 12 13 13V17.3H10.7V9.3H12.9V10.3H12.9C13.3 9.5 14.2 8.8 15.3 8.8C17.8 8.8 18 10.4 18 12.2V17.3Z"/>
+                </svg>
+            </a>
+            <!-- X/Twitter Icon -->
+            <a href="https://x.com/theryanstew"
+               target="_blank"
+               rel="noopener noreferrer">
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <!-- A simple 'X' shape path -->
+                    <path d="M4 4L20 20M20 4L4 20" stroke="#333" stroke-width="3" stroke-linecap="round"/>
                 </svg>
             </a>
         </div>
 
         <!-- TOP GPTs Section -->
         <div class="top-gpts">
-            <h2>My TOP GPTs</h2>
+            <h2>TOP GPTs</h2>
             <ul class="gpt-list">
                 <li>
                     <a href="#" class="gpt-link">Chemistry Chem</a>
                     <span class="gpt-details">
-                        400,000 chats &nbsp;|&nbsp; #10 in North America
+                        400,000 chats &nbsp;|&nbsp; #10 in Education
                     </span>
                 </li>
                 <li>
                     <a href="#" class="gpt-link">Statistics Stats</a>
                     <span class="gpt-details">
-                        300,000 chats &nbsp;|&nbsp; #12 in North America
+                        400,000 chats &nbsp;|&nbsp; #12 in Education
                     </span>
                 </li>
                 <li>
                     <a href="#" class="gpt-link">Economics Econ</a>
                     <span class="gpt-details">
-                        300,000 chats &nbsp;|&nbsp; #15 in North America
+                        400,000 chats &nbsp;|&nbsp; #15 in Education
                     </span>
                 </li>
                 <li>
                     <a href="#" class="gpt-link">Matlab Help</a>
                     <span class="gpt-details">
-                        200,000 chats
+                        300,000 chats &nbsp;|&nbsp; #20 in Programming
                     </span>
                 </li>
             </ul>
