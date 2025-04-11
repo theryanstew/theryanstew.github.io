@@ -7,36 +7,31 @@
     <style>
         body {
             margin: 0;
-            padding: 0;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+            padding: 2rem;
             background-color: #f5f5dc; /* Beige background */
             font-family: Arial, sans-serif;
             text-align: center;
-            overflow: hidden;
         }
         
         .container {
-            width: 90%;
             max-width: 1200px;
+            margin: 0 auto;
         }
         
         .logo {
             font-family: 'Courier New', Courier, monospace; /* Typewriter font */
             font-size: 12vw; /* Responsive font size */
-            margin-bottom: 0.5em;
+            margin: 0.5em 0 0.25em 0;
             color: #333;
             line-height: 1;
         }
         
         .tagline {
             font-family: 'Courier New', Courier, monospace;
-            font-size: 1.5rem;
-            margin-top: 2rem;
+            font-size: 1.4rem;
+            margin: 1.5rem 0 2rem 0;
             color: #555;
+            line-height: 1.5;
         }
         
         .link {
@@ -50,19 +45,34 @@
             color: #777;
         }
 
-        /* Simple style for the LinkedIn icon container */
+        /* LinkedIn icon container */
         .social-links {
-            margin-top: 1rem;
+            margin: 2rem 0 3rem 0; /* More space above/below */
         }
 
-        /* Style for the TOP GPTs list */
+        .linkedin-icon svg {
+            width: 48px;  /* Larger icon */
+            height: 48px;
+            fill: #333;
+            transition: fill 0.3s ease;
+        }
+
+        .linkedin-icon svg:hover {
+            fill: #777;
+        }
+
+        /* TOP GPTs Section */
         .top-gpts {
-            margin-top: 2rem;
             font-family: 'Courier New', Courier, monospace;
+            margin: 3rem auto;
+            max-width: 700px;
+            text-align: center;
         }
 
         .top-gpts h2 {
-            margin-bottom: 1rem;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            color: #333;
         }
 
         .gpt-list {
@@ -72,14 +82,31 @@
         }
 
         .gpt-list li {
-            margin: 0.5rem 0;
+            margin: 1rem 0;
+            font-size: 1.2rem; 
         }
 
-        .gpt-list a {
+        /* Style for GPT name + details */
+        .gpt-link {
+            font-weight: bold;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .gpt-link:hover {
+            color: #777;
             text-decoration: underline;
         }
 
-        /* Media queries for better responsiveness */
+        .gpt-details {
+            display: block;
+            font-weight: normal;
+            font-size: 1rem;
+            color: #555;
+            margin-top: 0.25rem;
+        }
+
+        /* Responsive sizing for larger screens */
         @media (min-width: 768px) {
             .logo {
                 font-size: 8vw;
@@ -100,20 +127,20 @@
         
         <!-- Tagline with updated Discord link -->
         <p class="tagline">
-            Explore more GPTs and join 5000+ member Discord Community 
+            Explore more GPTs and join 5000+ member Discord Community for AI News and Future AI Automations 
             <a href="https://discord.gg/ZZDwQHhFUz" class="link">HERE</a>
         </p>
 
-        <!-- LinkedIn Icon Link -->
+        <!-- LinkedIn Icon Link (no text) -->
         <div class="social-links">
-            <a href="https://www.linkedin.com/in/ryan2stewart/" class="link" target="_blank" rel="noopener noreferrer">
-                <!-- Inline SVG for LinkedIn icon (placeholder) -->
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" 
-                     xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                    <path d="M20 3H4C3.4 3 3 3.4 3 4V20C3 20.6 3.4 21 4 21H20C20.6 21 21 20.6 21 20V4C21 3.4 20.6 3 20 3ZM8.3 17.3H6V9.3H8.3V17.3ZM7.1 8.2C6.3 8.2 5.7 7.6 5.7 6.8C5.7 6 6.3 5.4 7.1 5.4C7.9 5.4 8.5 6 8.5 6.8C8.5 7.6 7.9 8.2 7.1 8.2ZM18 17.3H15.7V13.1C15.7 12.1 15.7 10.9 14.4 10.9C13.1 10.9 13 12 13 13V17.3H10.7V9.3H12.9V10.3H12.9C13.3 9.5 14.2 8.8 15.3 8.8C17.8 8.8 18 10.4 18 12.2V17.3Z" 
-                          fill="currentColor" />
+            <a href="https://www.linkedin.com/in/ryan2stewart/" 
+               class="linkedin-icon" 
+               target="_blank" 
+               rel="noopener noreferrer">
+                <!-- Inline SVG for LinkedIn icon -->
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M20 3H4C3.4 3 3 3.4 3 4V20C3 20.6 3.4 21 4 21H20C20.6 21 21 20.6 21 20V4C21 3.4 20.6 3 20 3ZM8.3 17.3H6V9.3H8.3V17.3ZM7.1 8.2C6.3 8.2 5.7 7.6 5.7 6.8C5.7 6 6.3 5.4 7.1 5.4C7.9 5.4 8.5 6 8.5 6.8C8.5 7.6 7.9 8.2 7.1 8.2ZM18 17.3H15.7V13.1C15.7 12.1 15.7 10.9 14.4 10.9C13.1 10.9 13 12 13 13V17.3H10.7V9.3H12.9V10.3H12.9C13.3 9.5 14.2 8.8 15.3 8.8C17.8 8.8 18 10.4 18 12.2V17.3Z" />
                 </svg>
-                LinkedIn
             </a>
         </div>
 
@@ -121,10 +148,30 @@
         <div class="top-gpts">
             <h2>My TOP GPTs</h2>
             <ul class="gpt-list">
-                <li><a href="https://chatgpt.com/g/g-3pqrO7KSp-chemistry-chem" class="link">Chemistry Chem (#10 in North America)</a></li>
-                <li><a href="https://chatgpt.com/g/g-Q1LwuGocS-statistics-stats" class="link">Statistics Stats (#12 in North America)</a></li>
-                <li><a href="https://chatgpt.com/g/g-xh1OJxj15-economics-econ" class="link">Economics Econ (#15 in North America)</a></li>
-                <li><a href="https://chatgpt.com/g/g-w6u2v1z4A-matlab-help" class="link">Matlab Help</a></li>
+                <li>
+                    <a href="#" class="gpt-link">Chemistry Chem</a>
+                    <span class="gpt-details">
+                        400,000 chats &nbsp;|&nbsp; #10 in North America
+                    </span>
+                </li>
+                <li>
+                    <a href="#" class="gpt-link">Statistics Stats</a>
+                    <span class="gpt-details">
+                        300,000 chats &nbsp;|&nbsp; #12 in North America
+                    </span>
+                </li>
+                <li>
+                    <a href="#" class="gpt-link">Economics Econ</a>
+                    <span class="gpt-details">
+                        300,000 chats &nbsp;|&nbsp; #15 in North America
+                    </span>
+                </li>
+                <li>
+                    <a href="#" class="gpt-link">Matlab Help</a>
+                    <span class="gpt-details">
+                        200,000 chats
+                    </span>
+                </li>
             </ul>
         </div>
     </div>
